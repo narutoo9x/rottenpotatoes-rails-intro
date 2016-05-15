@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails rottenpotatoes-rails-intro: test" uuid="132adc4a-19a3-4905-b011-e88e3b720d56">
+      <auth-required>false</auth-required>
+      <first-sync>true</first-sync>
+    </data-source>
+    <data-source name="Rails rottenpotatoes-rails-intro: development" uuid="219cde0c-3570-44ab-8f4c-199d54fdc1a7">
+      <auth-required>false</auth-required>
+      <first-sync>true</first-sync>
+    </data-source>
+  </component>
+</project>
