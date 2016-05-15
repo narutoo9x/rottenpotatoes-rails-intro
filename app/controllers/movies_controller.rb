@@ -13,8 +13,12 @@ class MoviesController < ApplicationController
   def index
     #sort movies by movie title and movie release date
     @movies = Movie.order(params[:sort_by])
+    # if use below statement will be error:
+    #Couldn't find all Movies with 'id': (all, {:order=>nil}) (found 0 results, but was looking for 2)
+    #@movies = Movie.find(:all, :order => (params[:sort_by]))
     if params[:ratings]
-      @movies = Movie.where(:rating => params[:ratings].keys).find(:all, :order => (params[:sort_by]))
+      #@movies = Movie.where(:rating => params[:ratings].keys).find(:all, :order => (params[:sort_by]))
+      @movies = Movie.where(:rating => params[:ratings].keys).order(params[:sort_by])
     end
     @sort_column = params[:sort_by]
     @all_ratings = Movie.all_ratings
